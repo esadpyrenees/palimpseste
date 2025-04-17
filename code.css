@@ -1,0 +1,39 @@
+body{
+    size: A4;
+    width: 210mm;
+    height: 297mm;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+.carte{
+    width: 60mm;
+    height: 113mm;
+    border: solid 1px black;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 2rem;
+    padding: 2.5rem;
+    font-size: 1.5rem;
+    text-wrap: balance;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carte p{
+    margin: 0;
+}
+
+.carte canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 99% !important; */
+    /* height:99% !important; */
+}
+
+.carte::after{
+    content:attr(data-code);
+    position: absolute;
+    top: 100%;
+}
