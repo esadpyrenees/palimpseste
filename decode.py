@@ -3,6 +3,8 @@ import numpy as np
 import argparse
 import math
 
+from messages import *
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--cam",type=int)
@@ -207,9 +209,9 @@ while cam.isOpened():
         cv2.imshow('GRID', grid2view)
 
         code = img2code(grid)
-        print(''.join(code))
+        # print(''.join(code))
         num = int(''.join(code),2)
-        print(num)
+        sendMessage(num)
 
 
     # Show image
