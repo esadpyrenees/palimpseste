@@ -32,8 +32,14 @@ body{
     /* height:99% !important; */
 }
 
-.carte::after{
+.carte::before{
     content:attr(data-code);
+    position: absolute;
+    bottom: 100%;
+}
+
+.carte::after{
+    content:attr(data-bin);
     position: absolute;
     top: 100%;
 }
