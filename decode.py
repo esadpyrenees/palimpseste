@@ -146,14 +146,16 @@ class App:
                     print(self.roi[3])
             else:
                 self.GUI_grabbing = False
+            
+            if self.roi_state > 3:
+                self.roi_init()
 
         # Middle click (erase current ROI)
         if event == cv2.EVENT_MBUTTONUP:
             self.roi[0], self.roi[1], self.roi[2], self.roi[3] = None, None, None, None
             self.roi_state = 0
 
-        if self.roi_state > 3:
-            self.roi_init()
+       
 
 
     def roi_init(self):
@@ -181,10 +183,10 @@ class App:
         self.contours_white, hierarchy = cv2.findContours(tmp_mask_white, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
         self.contours_white = sort_contours(self.contours_white, self.roi_width, method="left-to-right")
 
-        if self.check_controls_contours(tmp_mask_black,self.val_th) is not False:
-            ValueError("Le masque noir n'a pas passé le test :/")
-        if self.check_controls_contours(tmp_mask_white,self.val_th) is not True: 
-            ValueError("Le masque blanc n'a pas passé le test :/") 
+        # if self.check_controls_contours(tmp_mask_black,self.val_th) is not False:
+        #     ValueError("Le masque noir n'a pas passé le test :/")
+        # if self.check_controls_contours(tmp_mask_white,self.val_th) is not True: 
+        #     ValueError("Le masque blanc n'a pas passé le test :/") 
 
 
         tmp_mask_code = cv2.resize(self.mask_code.copy(),(self.roi_width,self.roi_height))
