@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vidéos  + questions</title>
+  <link rel="stylesheet" href="css/index.css">
+  <style>
+    button {
+      /* width: 2em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; */
+    }
+  </style>
+</head>
+<body>
+
+  <label for="number">Nombre de joueur⋅euses</label>
+  <input type="text" id="number" value="2" >
+  <input type="submit" value="ok" id="submit">
+
+  <div class="actions"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/master.js"></script>
+</body>
+</html>

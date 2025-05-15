@@ -7,7 +7,7 @@ import { Server } from 'socket.io';
 // config
 const port = process.env.PORT || 3000;
 // const ip = process.env.IP || 'localhost';
-const ip = process.env.IP || '192.168.1.187';
+const ip = process.env.IP || '192.168.2.186';
 
 
 // Server
@@ -23,12 +23,22 @@ app.get('/', (req, res) => {
   res.sendFile(join(__dirname, 'index.html'));
 });
 
+// maître⋅esse du jeu
+app.get('/master/', (req, res) => {
+  res.sendFile(join(__dirname, 'public/master.html'));
+});
+
+// free text
+app.get('/free/', (req, res) => {
+  res.sendFile(join(__dirname, 'public/free.html'));
+});
+
 // returns id from headers
 async function computeUserIdFromHeaders(headers) {
   return headers.id
 }
 
-
+let playersNumber = 0;
 
 // main
 io.on('connection', async (socket) => {
@@ -46,6 +56,28 @@ io.on('connection', async (socket) => {
     console.log("Message : changement de carte !");
     console.log(msg);
     io.emit('card change', msg);
+  });
+
+  // free text
+  socket.on('free text', (msg) => {
+    console.log("Message : text libre !");
+    console.log(msg);
+    io.emit('free text', msg);
+  });
+  
+  // action
+  socket.on('master action', (msg) => {
+    console.log("Message : action (master) !");
+    console.log(msg);
+    io.emit('master action', msg);
+  });
+
+  // set players number
+  socket.on('set players number', (msg) => {
+    console.log("Message : nombre de joueurs !");
+    console.log(msg);
+    playersNumber = msg;
+    console.log(playersNumber);
   });
 
 });
