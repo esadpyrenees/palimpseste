@@ -2,9 +2,8 @@ import cv2, sys
 import numpy as np
 import argparse
 import math
-
-from messages import *
-
+from chaussette import emitMessage
+import time
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--cam",type=int)
@@ -15,6 +14,9 @@ if args.cam:
     cam = cv2.VideoCapture(args.cam)
 else:
     cam = cv2.VideoCapture(0)
+
+# cam.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+# cam.set(cv2.CAP_PROP_FPS, 1)
 
 roi = [None,None,None,None]
 if args.roi:
@@ -74,6 +76,9 @@ class App:
 
         self.val_th = 125
         self.is_code = False
+
+        self.last_id_send = None
+
         #cam.set(cv2.CAP_PROP_FRAME_WIDTH, self.camW)
         #cam.set(cv2.CAP_PROP_FRAME_HEIGHT, self.camH)
 
@@ -155,7 +160,6 @@ class App:
             self.roi[0], self.roi[1], self.roi[2], self.roi[3] = None, None, None, None
             self.roi_state = 0
 
-       
 
 
     def roi_init(self):
@@ -235,6 +239,10 @@ class App:
         return check_black and check_white                                  # si noir et blanc ok
                 
 
+    def send_message(self,cardNumber):
+        # envoi du message via websocket
+        emitMessage("card change", cardNumber)
+        print(f"Le numéro est {cardNumber} !")
 
     def run(self):
         while self.cam.isOpened():
@@ -251,10 +259,8 @@ class App:
             if self.roi_state>3:
                 cv2.circle(frame2view, self.roi[3], self.GUI_handle_diameter, (0,0,255))
 
-
             # If a ROI is selected, draw it
             if self.roi_state > 3:
-                
                 # dessiner la ROI sur la cam
                 cv2.line(frame2view,self.roi[0],self.roi[1],(0,255,0),2)
                 cv2.line(frame2view,self.roi[1],self.roi[2],(0,255,0),2)
@@ -283,7 +289,6 @@ class App:
                 GUI_w1 = cv2.getWindowImageRect("ROI") #bbox de la fenêtre 1 pour placer la 2e à côté
 
                 ## threshold / seuil : plein de process et d'algo à tester 
-
                 img_gray = cv2.cvtColor(img_roi, cv2.COLOR_BGR2GRAY)
                 img_blur = cv2.GaussianBlur(img_gray,(5,5),0)
                 ret, img_treshold = cv2.threshold(img_blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU) 
@@ -337,15 +342,20 @@ class App:
 
                     ## calcule du code
                     code = [str(i) for i in self.current_code]
-                    print(code)
-                    print(''.join(code))
                     num = int(''.join(code),2)
-                    print(num)
                     self.current_id = num
-                    sendMessage(num)
-                else:
-                    cv2.destroyWindow("IMAGES CODE") 
+                    self.buffer_id.append(num)
+                    if len(self.buffer_id) > 11:
+                        self.buffer_id.pop(0)
 
+                    self.is_stable_id = all(x==self.buffer_id[0] for x in self.buffer_id) and len(self.buffer_id) > 10
+                     # changement de carte et stable !
+                    if self.last_id_send != self.current_id and self.is_stable_id:
+                        self.send_message(num)
+                        self.last_id_send = self.current_id
+                else:
+                    #cv2.destroyWindow("IMAGES CODE") 
+                    pass
             # Show image
             cv2.imshow('Frame', frame2view)
             

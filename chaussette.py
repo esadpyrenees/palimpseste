@@ -14,10 +14,10 @@ def emitMessage(msgType, msg):
       sio.connect(server_ip)
       sio.emit(msgType, msg)
       print('I’m connected. My sid is', sio.sid)
-      time.sleep(1)
+      #time.sleep(1)
   except Exception:
     print("Failed to connect")    
-    time.sleep(2)
+    #time.sleep(2)
     emitMessage(msgType, msg)
 
 
