@@ -20,27 +20,23 @@ for (let index = 0; index < actions.length; index++) {
   btn.textContent = action;
   document.querySelector('.actions').appendChild(btn)
   btn.onclick = () => {
-    console.log('btn clicked');
-    
     socket.emit("master action", btn.dataset.action);
   }  
 }
 
 const texte = [
-  "texte 1",
+  "texte super long qui dépasse",
   "text 2"
 ];
 
 for (let index = 1; index <= texte.length; index++) {
   const t = texte[index-1];
   const btn = document.createElement('button');
-  btn.dataset.text = t;
+  btn.dataset.textid = index;
   btn.textContent = t;
   document.querySelector('.texts').appendChild(btn)
   btn.onclick = () => {
-    console.log('btn clicked');
-    
-    socket.emit("master action", btn.dataset.action);
+    socket.emit("master text", btn.dataset.textid);
   }  
 }
 

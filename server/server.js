@@ -65,11 +65,17 @@ io.on('connection', async (socket) => {
     io.emit('free text', msg);
   });
   
-  // action
+  // master action
   socket.on('master action', (msg) => {
     console.log("Message : action (master) !");
     console.log(msg);
     io.emit('master action', msg);
+  });
+  // master text
+  socket.on('master text', (msg) => {
+    console.log("Message : text (master) !");
+    console.log(msg);
+    io.emit('master text', msg);
   });
 
   // set players number
