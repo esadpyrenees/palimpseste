@@ -1,0 +1,17 @@
+[    
+    {
+        "type": "text",
+        "description": "La rue des chariots - une course se prépare",
+        "overtitle": "La course",
+        "subtitle": "Fragments A",
+        "shortcut": "q"
+    },
+    {
+        "type": "action",
+        "description": "Un air penché",
+        "overtitle": "La police",
+        "subtitle": "Fragments p",
+        "action": "italicize",
+        "shortcut": "v"
+    }
+]

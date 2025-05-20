@@ -7,7 +7,7 @@ import { Server } from 'socket.io';
 // config
 const port = process.env.PORT || 3000;
 // const ip = process.env.IP || 'localhost';
-const ip = process.env.IP || '192.168.2.186';
+const ip = process.env.IP || '192.168.1.228';
 
 
 // Server
@@ -31,6 +31,11 @@ app.get('/master/', (req, res) => {
 // free text
 app.get('/free/', (req, res) => {
   res.sendFile(join(__dirname, 'public/free.html'));
+});
+
+// maquette des cartes
+app.get('/code/', (req, res) => {
+  res.sendFile(join(__dirname, 'public/code.html'));
 });
 
 // returns id from headers
