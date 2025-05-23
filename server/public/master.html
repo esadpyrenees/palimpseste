@@ -4,14 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vidéos  + questions</title>
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/master.css">
   <style>
     .texts button {
-      max-width: 4em;
+      width: 8em;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+    button.text { background: #000; color: white;}
+    button.action { background: lime; color: white;}
   </style>
 </head>
 <body>
@@ -19,6 +21,8 @@
   <label for="number">Nombre de joueur⋅euses</label>
   <input type="text" id="number" value="2" >
   <input type="submit" value="ok" id="submit">
+
+  <hr>
 
   <div class="actions"></div>
   <div class="texts"></div>
