@@ -1,17 +1,72 @@
 const socket = io();
 let userid = null;
 
-const cards_to_text = {
-  103: "Salut tout le monde",
-  102: "Comment ça va ?"  
-}
-const cards_to_actions = {
-  103: "italicize",
-  "q": "italicize",
-  10: "begaie"
-}
+const cards_to_text = {}
+const cards_to_actions = {}
 
 const textbox = document.querySelector('#textbox');
+
+const actions_dict = {
+  "q" : "cloneP",//-> ctrl c + ctrl p
+  "e" : "eto_", //-> disparition
+  "o" : "atoo", // a en o
+  "k" : "gtok",
+  "s" : "stoss",
+  "w" : "vtow", // v en w
+  "z" : "stoz", // s en z
+  "a" : "dtodj",
+  "à" : "ttotch",
+  "m" : "mix", //-> Palindrome card
+  "x" : "begaie",
+  "l" : "apply_lettrine", 
+  "h" : "break_lines",
+  "p" : "random_font",
+  "c" : "random_corps",
+  "t" : "random_color",
+  "r" : "reset",
+  "f" : "print",
+  "b" : "letter_spacing",
+  "v" : "alinea",
+  "-" : "random_align",
+  "i" : "interlignage",
+  "g" : "style"
+}
+
+
+async function getData() {
+  const url = "js/cards.json";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const texts = [];
+    const json = await response.json();
+    json.forEach((entry, idx) => {
+      switch (entry['type']) {
+        case "text":
+          cards_to_text[entry.shortcut] = entry.description
+          break;
+        case "action":
+          cards_to_actions[entry.shortcut] = entry.description
+          break;
+        default:
+          break;
+      }         
+    });
+
+    return texts;
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+getData().then(() => {
+  console.log(cards_to_text);
+})
+
+
 
 // --------------------------- socket
 
@@ -35,13 +90,15 @@ socket.on('card change', (card_number) => {
   console.log(`Nouvelle carte détectée: ${card_number} !`);
 
   const text = cards_to_text[card_number] ?? null;
-  const action = cards_to_actions[card_number] ?? null;
+  const action = actions_dict[card_number] ?? null;
   if(text) {
     textbox.insertAdjacentHTML("beforeend", `<p>${text}</p>`)
   }
   if(action) {
+    
     const fn = window[action]
     if(typeof fn === "function"){
+      console.log("ici !");
       fn()
     }
   }
