@@ -23,9 +23,10 @@ async function getData() {
 
       const card = document.createElement('div');
       card.dataset.code = idx;
-      card.className = "carte " + entry.type
-      card.innerHTML = `<h2>${entry.overtitle}</h2>
-      <p>${entry.description}</p>
+      card.className = "carte " + entry.type;
+      const desc = entry.description.replaceAll('/', "<br>");
+      card.innerHTML = `<h3>${entry.overtitle}</h3>
+      <p>${desc}</p>
       <footer>${entry.subtitle}</footer>`;
       cards.push(card);
       document.body.appendChild(card);
@@ -64,6 +65,7 @@ function createCodes(cartes){
               console.log(code)
     
               let w = p.width / 4;
+              const epaisseur = 24;
 
               // top & bottom pour l'orientation 
               let top = [1,0];
@@ -77,12 +79,12 @@ function createCodes(cartes){
               let splitsX = p.width / 3;
               for (let i = 0; i < top.length; i++) {
                   p.fill(0,p.map(top[i], 0, 1, 0, 255));
-                  p.rect((i + 1) * splitsX, 0, w, w);
+                  p.rect((i + 1) * splitsX, 0, w, epaisseur);
               }
 
               for (let i = 0; i < bottom.length; i++) {
                 p.fill(0,p.map(bottom[i], 0, 1, 0, 255));
-                p.rect((i + 1) * splitsX, p.height, w, w);
+                p.rect((i + 1) * splitsX, p.height, w, epaisseur);
               }
 
               // gauche et droite pour l'encodage
@@ -93,12 +95,12 @@ function createCodes(cartes){
               let h = p.height / 8;
               for (let i = 0; i < right.length; i++) {
                   p.fill(0,p.map(right[i], 0, 1, 0, 255));
-                  p.rect(p.width, (i + 1) * splitsY, w, w);
+                  p.rect(p.width, (i + 1) * splitsY, epaisseur, w);
               }
 
               for (let i = 0; i < left.length; i++) {
                   p.fill(0,p.map(left[i], 0, 1, 0, 255));
-                  p.rect(0, (i + 1) * splitsY, w, w);
+                  p.rect(0, (i + 1) * splitsY, epaisseur, w);
               }
           }
       }, "d" + idc)
@@ -107,46 +109,3 @@ function createCodes(cartes){
   }
 
 }
-/*
-  code = dec2bin(230,16)
-  console.log(code)
-  function setup() {
-    createCanvas(600, 1300);
-    noLoop();
-    rectMode(CENTER);
-    noStroke();
-  }
-  
-  function draw() {
-    background(200);
-  
-    let top = code.slice(0, 2);
-    let right = code.slice(2, 8);
-    let bottom = code.slice(8, 10);
-    let left = code.slice(10, 16);
-  
-    let splitsX = width / 3;
-    let w = width / 4;
-    for (let i = 0; i < top.length; i++) {
-      fill(map(top[i],0,1,255,0) );
-      rect((i + 1) * splitsX, 0, w, w);
-    }
-  
-    let splitsY = height / 7;
-    let h = height / 8;
-    for (let i = 0; i < right.length; i++) {
-      fill(map(right[i],0,1,255,0) );
-      rect(width, (i + 1) * splitsY, w, w);
-    }
-  
-    for (let i = 0; i < bottom.length; i++) {
-      fill(map(bottom[i],0,1,255,0) );
-      rect(width - (i + 1) * splitsX, height, w, w);
-    }
-  
-    for (let i = 0; i < left.length; i++) {
-      fill(map(left[i],0,1,255,0) );
-      rect(0, height - (i + 1) * splitsY, w, w);
-    }
-  }
-    */

@@ -1,17 +1,1113 @@
 [    
     {
         "type": "text",
-        "description": "La rue des chariots - une course se prépare",
-        "overtitle": "La course",
-        "subtitle": "Fragments A",
-        "shortcut": "q"
+        "description": "Posé là, /simplement",
+        "overtitle": "La simplicité",
+        "subtitle": "Fragment 1",
+        "shortcut": "1"
     },
     {
+        "type": "text",
+        "description": "Admirant tous les jours le même décor",
+        "overtitle": "L’admiration",
+        "subtitle": "Fragment 2",
+        "shortcut": "2"
+    },
+
+    {
+        "type": "text",
+        "description": "Les passants, les habitants, les invités",
+        "overtitle": "La simplicité",
+        "subtitle": "Fragment 3",
+        "shortcut": "3"
+    },
+
+    {
+        "type": "text",
+        "description": "Tous, se bousculent et passent à côté",
+        "overtitle": "Le passage",
+        "subtitle": "Fragment 4",
+        "shortcut": "4"
+    },
+
+    {
+        "type": "text",
+        "description": "Posé là, depuis je ne sais plus trop quand",
+        "overtitle": "Le savoir",
+        "subtitle": "Fragment 6",
+        "shortcut": "6"
+    },
+
+    {
+        "type": "text",
+        "description": "Ramené puis déposé",
+        "overtitle": "La mène",
+        "subtitle": "Fragment 7",
+        "shortcut": "7"
+    },
+
+    {
+        "type": "text",
+        "description": "Mon rôle, /si bref, /déjà terminé",
+        "overtitle": "Le rôle",
+        "subtitle": "Fragment 8",
+        "shortcut": "8"
+    },
+
+    {
+        "type": "text",
+        "description": "Un souvenir /de voyage, /rapidement aimé",
+        "overtitle": "Le souvenir",
+        "subtitle": "Fragment 9",
+        "shortcut": "9"
+    },
+
+    {
+        "type": "text",
+        "description": "Puis oublié",
+        "overtitle": "L’oubli",
+        "subtitle": "Fragment 10",
+        "shortcut": "10"
+    },
+
+    {
+        "type": "text",
+        "description": "Céramique /ou plastique",
+        "overtitle": "La matière",
+        "subtitle": "Fragment 11",
+        "shortcut": "11"
+    },
+
+    {
+        "type": "text",
+        "description": "À la main /ou d’usine",
+        "overtitle": "La fabrication",
+        "subtitle": "Fragment 12",
+        "shortcut": "12"
+    },
+
+    {
+        "type": "text",
+        "description": "Un paysage, un drapeau ou une blague",
+        "overtitle": "L’identité",
+        "subtitle": "Fragment 13",
+        "shortcut": "13"
+    },
+
+    {
+        "type": "text",
+        "description": "Qu’importe ma forme, ma couleur",
+        "overtitle": "La forme",
+        "subtitle": "Fragment 14",
+        "shortcut": "14"
+    },
+
+    {
+        "type": "text",
+        "description": "Ma présence pourtant permanente",
+        "overtitle": "La présence",
+        "subtitle": "Fragment 15",
+        "shortcut": "15"
+    },
+
+    {
+        "type": "text",
+        "description": "Aussi éphémère que votre bonheur",
+        "overtitle": "Le bonheur",
+        "subtitle": "Fragment 16",
+        "shortcut": "16"
+    },
+
+    {
+        "type": "text",
+        "description": "Souvenir d’un lieu, d’un voyage, d’une époque",
+        "overtitle": "Le souvenir",
+        "subtitle": "Fragment 16",
+        "shortcut": "16"
+    },
+
+    {
+        "type": "text",
+        "description": "Posé là, indéfiniment, sur le frigo des parents",
+        "overtitle": "L’infini",
+        "subtitle": "Fragment 17",
+        "shortcut": "17"
+    },
+
+    {
+        "type": "text",
+        "description": "Attendant d’être rejoint par d’autres",
+        "overtitle": "L’attente",
+        "subtitle": "Fragment 18",
+        "shortcut": "18"
+    },
+
+    {
+        "type": "text",
+        "description": "Souvenirs d’aventures que je ne vivrai pas",
+        "overtitle": "La vie",
+        "subtitle": "Fragment 19",
+        "shortcut": "19"
+    },
+
+    {
+        "type": "text",
+        "description": "Attendant d’être remplacé, par un, plus récent que moi ",
+        "overtitle": "Le remplacement",
+        "subtitle": "Fragment 20",
+        "shortcut": "20"
+    },
+
+    {
+        "type": "text",
+        "description": "Agrippé depuis toujours",
+        "overtitle": "L’attache",
+        "subtitle": "Fragment 101",
+        "shortcut": "101"
+    },
+
+    {
+        "type": "text",
+        "description": "Au service des uns, des autres",
+        "overtitle": "L’autre",
+        "subtitle": "Fragment 102",
+        "shortcut": "102"
+    },
+
+    {
+        "type": "text",
+        "description": "Sans un merci, jamais",
+        "overtitle": "Le remerciement",
+        "subtitle": "Fragment 103",
+        "shortcut": "103"
+    },
+
+    {
+        "type": "text",
+        "description": "Mais des regards, ça oui",
+        "overtitle": "Le regard",
+        "subtitle": "Fragment 104",
+        "shortcut": "104"
+    },
+
+    {
+        "type": "text",
+        "description": "Le reflet des autres",
+        "overtitle": "Le reflet",
+        "subtitle": "Fragment 105",
+        "shortcut": "105"
+    },
+
+    {
+        "type": "text",
+        "description": "Dans le meilleur et le pire jour",
+        "overtitle": "Le jour",
+        "subtitle": "Fragment 106",
+        "shortcut": "106"
+    },
+
+
+    {
+        "type": "text",
+        "description": "Sous la lumière et dans le noir",
+        "overtitle": "La lumière",
+        "subtitle": "Fragment 107",
+        "shortcut": "107"
+    },
+
+    {
+        "type": "text",
+        "description": "Peut-être le seul à les connaître vraiment",
+        "overtitle": "La connaissance",
+        "subtitle": "Fragment 108",
+        "shortcut": "108"
+    },
+
+    {
+        "type": "text",
+        "description": "Espion en un sens",
+        "overtitle": "Le sens",
+        "subtitle": "Fragment 109",
+        "shortcut": "109"
+    },
+
+    {
+        "type": "text",
+        "description": "Mais activité forcée",
+        "overtitle": "La contrainte",
+        "subtitle": "Fragment 110",
+        "shortcut": "110"
+    },
+
+    {
+        "type": "text",
+        "description": "Usage unique ",
+        "overtitle": "L’unicité",
+        "subtitle": "Fragment 111",
+        "shortcut": "111"
+    },
+
+    {
+        "type": "text",
+        "description": "Aucune liberté ",
+        "overtitle": "La liberté",
+        "subtitle": "Fragment 112",
+        "shortcut": "112"
+    },
+
+    {
+        "type": "text",
+        "description": "Le poids pèse plus",
+        "overtitle": "Le poids",
+        "subtitle": "Fragment 113",
+        "shortcut": "113"
+    },
+
+    {
+        "type": "text",
+        "description": "Avec le temps",
+        "overtitle": "Le temps",
+        "subtitle": "Fragment 114",
+        "shortcut": "114"
+    },
+
+    {
+        "type": "text",
+        "description": "S’amasse la poussière, celle de chacun",
+        "overtitle": "La poussière",
+        "subtitle": "Fragment 115",
+        "shortcut": "115"
+    },
+
+    {
+        "type": "text",
+        "description": "Grands-parents, enfants, et même intermédiaires",
+        "overtitle": "La famille",
+        "subtitle": "Fragment 116",
+        "shortcut": "116"
+    },
+
+    {
+        "type": "text",
+        "description": "J’ai vu défiler des générations entières",
+        "overtitle": "La génération",
+        "subtitle": "Fragment 117",
+        "shortcut": "117"
+    },
+
+    {
+        "type": "text",
+        "description": "Un peu fatigué, rouillé sur les extrémités",
+        "overtitle": "La fatigue",
+        "subtitle": "Fragment 119",
+        "shortcut": "119"
+    },
+
+    {
+        "type": "text",
+        "description": "Peut-être que le prochain saura me rafistoler",
+        "overtitle": "La réparation",
+        "subtitle": "Fragment 120",
+        "shortcut": "120"
+    },
+
+    {
+        "type": "text",
+        "description": "J’en entends des conversations",
+        "overtitle": "L’ouïe",
+        "subtitle": "Fragment 121",
+        "shortcut": "121"
+    },
+
+    {
+        "type": "text",
+        "description": "J’assiste aux discours qui ne naîtront jamais",
+        "overtitle": "La vue",
+        "subtitle": "Fragment 122",
+        "shortcut": "122"
+    },
+
+    {
+        "type": "text",
+        "description": "Aux concerts jamais programmés",
+        "overtitle": "Le rêve",
+        "subtitle": "Fragment 123",
+        "shortcut": "123"
+    },
+
+    {
+        "type": "text",
+        "description": "Aux scènes d’amour endiablées",
+        "overtitle": "L’amour",
+        "subtitle": "Fragment 124",
+        "shortcut": "124"
+    },
+
+    {
+        "type": "text",
+        "description": "Un voyeur qui ne peut faire autrement",
+        "overtitle": "Le voyeur",
+        "subtitle": "Fragment 125",
+        "shortcut": "125"
+    },
+
+    {
+        "type": "text",
+        "description": "Montrer le reflet de ce qu’il se passe réellement",
+        "overtitle": "Le reflet",
+        "subtitle": "Fragment 126",
+        "shortcut": "126"
+    },
+
+    {
+        "type": "text",
+        "description": "Laisser ensuite libre cours à l’interprétation",
+        "overtitle": "Le libre-arbitre",
+        "subtitle": "Fragment 127",
+        "shortcut": "127"
+    },
+
+    {
+        "type": "text",
+        "description": "Des images et des sensations",
+        "overtitle": "La sensation",
+        "subtitle": "Fragment 128",
+        "shortcut": "128"
+    },
+
+    {
+        "type": "text",
+        "description": "Suspendu comme flottant",
+        "overtitle": "La suspension",
+        "subtitle": "Fragment 201",
+        "shortcut": "201"
+    },
+
+    {
+        "type": "text",
+        "description": "Une vue imprenable sur tout ce qui se déroule",
+        "overtitle": "L’observation",
+        "subtitle": "Fragment 202",
+        "shortcut": "202"
+    },
+
+    {
+        "type": "text",
+        "description": "Sous le regard inattentif",
+        "overtitle": "L’innatention",
+        "subtitle": "Fragment 203",
+        "shortcut": "203"
+    },
+
+    {
+        "type": "text",
+        "description": "Des passants",
+        "overtitle":"Le passant",
+        "subtitle": "Fragment 204",
+        "shortcut": "204"
+    },
+
+    {
+        "type": "text",
+        "description": "Des habitants",
+        "overtitle":"L’habitant",
+        "subtitle": "Fragment 205",
+        "shortcut": "205"
+    },
+
+    {
+        "type": "text",
+        "description": "J’ensoleille leur vie",
+        "overtitle":"La lumière",
+        "subtitle": "Fragment 206",
+        "shortcut": "206"
+    },
+
+    {
+        "type": "text",
+        "description": "Je crois",
+        "overtitle":"La croyance",
+        "subtitle": "Fragment 207",
+        "shortcut": "207"
+    },
+
+    {
+        "type": "text",
+        "description": "J’ensoleille leur soirée",
+        "overtitle":"L’obscurité",
+        "subtitle": "Fragment 208",
+        "shortcut": "208"
+    },
+
+    {
+        "type": "text",
+        "description": "C’est certain",
+        "overtitle":"La certitude",
+        "subtitle": "Fragment 209",
+        "shortcut": "209"
+    },
+
+    {
+        "type": "text",
+        "description": "Pour moi, pas de remerciements",
+        "overtitle":"La reconnaissance",
+        "subtitle": "Fragment 210",
+        "shortcut": "210"
+    },
+
+    {
+        "type": "text",
+        "description": "Un regard parfois mais, très rarement",
+        "overtitle":"Le regard",
+        "subtitle": "Fragment 211",
+        "shortcut": "211"
+    },
+
+    {
+        "type": "text",
+        "description": "Un coup de chiffon, me manque cruellement",
+        "overtitle":"Le manque",
+        "subtitle": "Fragment 212",
+        "shortcut": "212"
+    },
+
+    {
+        "type": "text",
+        "description": "Brillant dans un sens",
+        "overtitle":"L’apparence",
+        "subtitle": "Fragment 213",
+        "shortcut": "213"
+    },
+
+    {
+        "type": "text",
+        "description": "Lorsque l’on observe l’autre côté",
+        "overtitle":"La réalité",
+        "subtitle": "Fragment 214",
+        "shortcut": "214"
+    },
+
+    {
+        "type": "text",
+        "description": "Sombre et Lourd ",
+        "overtitle":"Le poids",
+        "subtitle": "Fragment 215",
+        "shortcut": "215"
+    },
+
+    {
+        "type": "text",
+        "description" : "Poussiéreux et délaissé",
+        "overtitle":"L’ancien",
+        "subtitle": "Fragment 216",
+        "shortcut": "216"
+    },
+
+    {
+        "type": "text",
+        "description" : "Il ne vaut mieux jamais se retourner",
+        "overtitle":"L’avant",
+        "subtitle": "Fragment 217",
+        "shortcut": "217"
+    },
+
+
+    {
+        "type": "text",
+        "description" : "Chérir ce qu’on a et accepter ",
+        "overtitle":"L’acceptation",
+        "subtitle": "Fragment 218",
+        "shortcut": "218"
+    },
+
+    {
+        "type": "text",
+        "description" : "Notre rôle est celui-là",
+        "overtitle":"Le rôle",
+        "subtitle": "Fragment 219",
+        "shortcut": "219"
+    },
+
+
+    {
+        "type": "text",
+        "description" : "Qu’importe la durée",
+        "overtitle":"La durée",
+        "subtitle": "Fragment 220",
+        "shortcut": "220"
+    },
+
+    {
+        "type": "text",
+        "description" : "Avant d’être abimé, cassé puis remplacé",
+        "overtitle":"Le pessimisme",
+        "subtitle": "Fragment 221",
+        "shortcut": "221"
+    },
+
+    {
+        "type": "text",
+        "description" : "Ou peut-être rester à tout jamais",
+        "overtitle":"L’obtimisme",
+        "subtitle": "Fragment 222",
+        "shortcut": "222"
+    },
+
+    {
+        "type": "text",
+        "description" : "Je suis comme un héros",
+        "overtitle":"Le héros",
+        "subtitle": "Fragment 301",
+        "shortcut": "301"
+    },
+
+    {
+        "type": "text",
+        "description" : "Sorti tout droit d’un film ",
+        "overtitle":"La sortie",
+        "subtitle": "Fragment 302",
+        "shortcut": "302"
+    },
+
+    {
+        "type": "text",
+        "description" : "Omniscient - Tous, se confient",
+        "overtitle":"Le savoir",
+        "subtitle": "Fragment 303",
+        "shortcut": "303"
+    },
+
+    {
+        "type": "text",
+        "description" : "J’entends, les secrets, les chants",
+        "overtitle":"La confidence",
+        "subtitle": "Fragment 304",
+        "shortcut": "304"
+    },
+
+    {
+        "type": "text",
+        "description" : "Omnipotent - Tous, me serrent ",
+        "overtitle":"Le pouvoir",
+        "subtitle": "Fragment 305",
+        "shortcut": "305"
+    },
+
+    {
+        "type": "text",
+        "description" : "Mon super pouvoir je les guéries",
+        "overtitle":"La guérison",
+        "subtitle": "Fragment 306",
+        "shortcut": "306"
+    },
+
+    {
+        "type": "text",
+        "description" : "J’essuie les rire et les larmes",
+        "overtitle":"Les émotions",
+        "subtitle": "Fragment 307",
+        "shortcut": "307"
+    },
+
+    {
+        "type": "text",
+        "description" : "J’essuie parfois le sang",
+        "overtitle":"Le soin",
+        "subtitle": "Fragment 308",
+        "shortcut": "308"
+    },
+
+
+    {
+        "type": "text",
+        "description" : "Je suis comme un soldat",
+        "overtitle":"Le soldat",
+        "subtitle": "Fragment 309",
+        "shortcut": "309"
+    },
+
+    {
+        "type": "text",
+        "description" : "Prêt à toutes les batailles",
+        "overtitle":"La bataille",
+        "subtitle": "Fragment 310",
+        "shortcut": "310"
+    },
+
+    {
+        "type": "text",
+        "description" : "Sans jamais me défiler",
+        "overtitle":"La force",
+        "subtitle": "Fragment 312",
+        "shortcut": "312"
+    },
+
+    {
+        "type": "text",
+        "description" : "Sur la fin de ma carrière beaucoup pensent à me remercier ",
+        "overtitle":"La retraite",
+        "subtitle": "Fragment 313",
+        "shortcut": "313"
+    },
+
+    {
+        "type": "text",
+        "description" : "On me garde précieusement de côté ",
+        "overtitle":"La conservation",
+        "subtitle": "Fragment 314",
+        "shortcut": "314"
+    },
+
+    {
+        "type": "text",
+        "description" : "Parfois posé, parfois rangé",
+        "overtitle":"L’exposition",
+        "subtitle": "Fragment 315",
+        "shortcut": "315"
+    },
+
+    {
+        "type": "text",
+        "description" : "Mes cicatrices sont les stigmates d’un travail bien fait",
+        "overtitle":"La satisfaction",
+        "subtitle": "Fragment 316",
+        "shortcut": "316"
+    },
+
+    {
+        "type": "text",
+        "description" : "Elles sont les traces du temps qui passe",
+        "overtitle":"Le temps",
+        "subtitle": "Fragment 317",
+        "shortcut": "317"
+    },
+
+    {
+        "type": "text",
+        "description" : "Un temps où, partout, je vous accompagnais",
+        "overtitle":"Le souvenir",
+        "subtitle": "Fragment 318",
+        "shortcut": "318"
+    },
+
+    {
+        "type": "text",
+        "description" : "Et par moment, malgré un âge avancé",
+        "overtitle":"L’âge",
+        "subtitle": "Fragment 319",
+        "shortcut": "319"
+    },
+
+    {
+        "type": "text",
+        "description" : "En vous, il réapparaît ",
+        "overtitle":"Le retour",
+        "subtitle": "Fragment 320",
+        "shortcut": "320"
+    },
+
+    {
+        "type": "text",
+        "description" : "Juste en un regard vous vous souvenez",
+        "overtitle":"Le regard",
+        "subtitle": "Fragment 321",
+        "shortcut": "321"
+    },
+
+    {
+        "type": "text",
+        "description" : "Je suis comme un héros",
+        "overtitle":"La comparaison",
+        "subtitle": "Fragment 322",
+        "shortcut": "322"
+    },
+
+    {
+        "type": "text",
+        "description" : "Sorti tout droit d’un film",
+        "overtitle":"La fiction",
+        "subtitle": "Fragment 323",
+        "shortcut": "323"
+    },
+
+    {
+        "type": "text",
+        "description" : "Omnipotent - Avec comme super pouvoir,",
+        "overtitle":"La capacité",
+        "subtitle": "Fragment 324",
+        "shortcut": "324"
+    },
+
+    {
+        "type": "text",
+        "description" : "De vous faire redevenir enfant",
+        "overtitle":"L’enfance",
+        "subtitle": "Fragment 325",
+        "shortcut": "325"
+    },
+
+    {
+        "type": "text",
+        "description" : "Le cours d’un bref instant ",
+        "overtitle":"L’ephémère",
+        "subtitle": "Fragment 326",
+        "shortcut": "326"
+    },
+
+    {
+        "type": "text",
+        "description" : "Il fait sombre",
+        "overtitle":"Le noir",
+        "subtitle": "Fragment 401",
+        "shortcut": "401"
+    },
+
+    {
+        "type": "text",
+        "description" : "C’est chaud aussi",
+        "overtitle":"La chaleur",
+        "subtitle": "Fragment 402",
+        "shortcut": "402"
+    },
+
+    {
+        "type": "text",
+        "description" : "C’est plutôt chouette",
+        "overtitle":"La joie",
+        "subtitle": "Fragment 403",
+        "shortcut": "403"
+    },
+
+    {
+        "type": "text",
+        "description" : "Comme un nouvel espace débloqué",
+        "overtitle":"Le mouvement",
+        "subtitle": "Fragment 404",
+        "shortcut": "404"
+    },
+
+    {
+        "type": "text",
+        "description" : "Une nouvelle quête",
+        "overtitle":"La quête",
+        "subtitle": "Fragment 405",
+        "shortcut": "405"
+    },
+
+    {
+        "type": "text",
+        "description" : "J’aimais pas trop la première",
+        "overtitle":"L’opportunité",
+        "subtitle": "Fragment 406",
+        "shortcut": "406"
+    },
+
+    {
+        "type": "text",
+        "description" : "Je devais partager",
+        "overtitle":"Le partage",
+        "subtitle": "Fragment 407",
+        "shortcut": "407"
+    },
+
+    {
+        "type": "text",
+        "description" : "Ma soeur me manque un peu c’est vrai ",
+        "overtitle":"Le manque",
+        "subtitle": "Fragment 408",
+        "shortcut": "408"
+    },
+
+    {
+        "type": "text",
+        "description" : "Mais la solitude…",
+        "overtitle":"La solitude",
+        "subtitle": "Fragment 409",
+        "shortcut": "409"
+    },
+
+    {
+        "type": "text",
+        "description" : "[ Jeu de mot ]",
+        "overtitle":"Le mot",
+        "subtitle": "Fragment 410",
+        "shortcut": "410"
+    },
+
+    {
+        "type": "text",
+        "description" : "J’aime jouer",
+        "overtitle":"Le jeu",
+        "subtitle": "Fragment 411",
+        "shortcut": "411"
+    },
+
+    {
+        "type": "text",
+        "description" : "Dans mon ancienne vie je ne pouvais pas ",
+        "overtitle":"Le changement",
+        "subtitle": "Fragment 412",
+        "shortcut": "412"
+    },
+
+    {
+        "type": "text",
+        "description" : "Maintenant je me faufile",
+        "overtitle":"La cachette",
+        "subtitle": "Fragment 413",
+        "shortcut": "413"
+    },
+
+    {
+        "type": "text",
+        "description" : "Là où on m’attends pas ",
+        "overtitle":"La surprise",
+        "subtitle": "Fragment 414",
+        "shortcut": "414"
+    },
+
+    {
+        "type": "text",
+        "description" : "Mon objectif premier ?",
+        "overtitle":"L’objectif",
+        "subtitle": "Fragment 415",
+        "shortcut": "415"
+    },
+
+    {
+        "type": "text",
+        "description" : "Ne plus jamais être retrouvée",
+        "overtitle":"La disparition",
+        "subtitle": "Fragment 416",
+        "shortcut": "416"
+    },
+
+    {
+        "type": "text",
+        "description" : "C’est quand même plus amusant",
+        "overtitle":"L’amusement",
+        "subtitle": "Fragment 417",
+        "shortcut": "417"
+    },
+
+    {
+        "type": "text",
+        "description" : "Me faire marcher dessus, ne me plaisait plus",
+        "overtitle":"Le plaisir",
+        "subtitle": "Fragment 418",
+        "shortcut": "418"
+    },
+
+    {
+        "type": "text",
+        "description" : "Je suis comme une éternelle enfant",
+        "overtitle":"L’éternel",
+        "subtitle": "Fragment 419",
+        "shortcut": "419"
+    },
+
+    {
+        "type": "text",
+        "description" : "Je m’enroule, me cache et disparait ",
+        "overtitle":"Le camouflage",
+        "subtitle": "Fragment 420",
+        "shortcut": "420"
+    },
+
+    {
+        "type": "text",
+        "description" : "Dans les tréfonds de la machine à laver",
+        "overtitle":"Le camouflage",
+        "subtitle": "Fragment 421",
+        "shortcut": "421"
+    },
+
+
+
+    {
         "type": "action",
-        "description": "Un air penché",
+        "description": "Dupliquer le fragment de texte qui vient d’être posé",
+        "overtitle": "La duplication",
+        "subtitle": "Fragment Q",
+        "action": "cloneP",
+        "shortcut": "q"
+    },
+
+
+    {
+        "type": "action",
+        "description": "Effacer toutes les lettre [e] du texte",
+        "overtitle": "La disparition",
+        "subtitle": "Fragment E",
+        "action": "eto_",
+        "shortcut": "e"
+    },
+
+    {
+        "type": "action",
+        "description": "Changer tous les [a] en [o]",
+        "overtitle": "La lettre",
+        "subtitle": "Fragment K",
+        "action": "gtok",
+        "shortcut": "k"
+    },
+
+    {
+        "type": "action",
+        "description": "Doubler tous les [s]",
+        "overtitle": "Le dédoublement",
+        "subtitle": "Fragment S",
+        "action": "stoss",
+        "shortcut": "s"
+    },
+
+    {
+        "type": "action",
+        "description": "Changer tous les [v] en [w]",
+        "overtitle": "La consonne",
+        "subtitle": "Fragment w",
+        "action": "vtow",
+        "shortcut": "w"
+    },
+
+    {
+        "type": "action",
+        "description": "Changer tous les [s] en [z]",
+        "overtitle": "Le changement",
+        "subtitle": "Fragment Z",
+        "action": "stoz",
+        "shortcut": "z"
+    },
+
+    {
+        "type": "action",
+        "description": "Création d’un tic de langage",
+        "overtitle": "L’affrication",
+        "subtitle": "Fragment A",
+        "action": "dtodj",
+        "shortcut": "a"
+    },
+
+    {
+        "type": "action",
+        "description": "Inverser aléatoirement la place des mots dans la phrase",
+        "overtitle": "Le palindrome",
+        "subtitle": "Fragment M",
+        "action": "mix",
+        "shortcut": "m"
+    },
+
+    {
+        "type": "action",
+        "description": "Répeter aléatoirement un mot ou un groupe de mot dans la phrase",
+        "overtitle": "Le bégaiment",
+        "subtitle": "Fragment X",
+        "action": "begaie",
+        "shortcut": "x"
+    },
+
+    {
+        "type": "action",
+        "description": "Changer tous les [g] en [k]",
+        "overtitle": "La voyelle",
+        "subtitle": "Fragment 0",
+        "action": "atoo",
+        "shortcut": "o"
+    },
+
+    {
+        "type": "action",
+        "description": "Démarrer une nouvelle partie",
+        "overtitle":"L’exorde",
+        "subtitle": "Fragment R",
+        "action": "reset",
+        "shortcut": "r"
+    },
+
+    {
+        "type": "action",
+        "description": "Mettre fin à la partie et imprimer son poème",
+        "overtitle":"L’épilogue",
+        "subtitle": "Fragment F",
+        "action": "print",
+        "shortcut": "f"
+    },
+
+    {
+        "type": "action",
+        "description": "Créer une lettrine",
+        "overtitle": "La lettrine",
+        "subtitle": "Fragment L",
+        "action": "apply_lettrine",
+        "shortcut": "l"
+    },
+
+    {
+        "type": "action",
+        "description": "Renvoyer le texte à la ligne",
+        "overtitle": "La ligne",
+        "subtitle": "Fragment H",
+        "action": "break_lines",
+        "shortcut": "h"
+    },
+
+    {
+        "type": "action",
+        "description": "Changer aléatoirement la police de caractères",
         "overtitle": "La police",
-        "subtitle": "Fragments p",
-        "action": "italicize",
+        "subtitle": "Fragment P",
+        "action": "random_font",
+        "shortcut": "p"
+    },
+
+    {
+        "type": "action",
+        "description": "Changer aléatoirement le corps du texte",
+        "overtitle": "Le corps",
+        "subtitle": "Fragment C",
+        "action": "random_corps",
+        "shortcut": "c"
+    },
+
+    {
+        "type": "action",
+        "description": "Changer aléatoirement le spacing des lettres",
+        "overtitle": "Le spacing",
+        "subtitle": "Fragment B",
+        "action": "letter_spacing",
+        "shortcut": "b"
+    },
+
+    {
+        "type": "action",
+        "description": "Créer un alinéa",
+        "overtitle": "L’alinéa",
+        "subtitle": "Fragment V",
+        "action": "alinea",
         "shortcut": "v"
+    },
+
+    {
+        "type": "action",
+        "description": "Changer aléatoirement la graisse de la police de caractères",
+        "overtitle": "La graisse",
+        "subtitle": "Fragment G",
+        "action": "style",
+        "shortcut": "g"
+    },
+
+    {
+        "type": "action",
+        "description": "Changer aléatoirement l’interlignage",
+        "overtitle": "L’interlignage",
+        "subtitle": "Fragment _",
+        "action": "random_align",
+        "shortcut": "_"
     }
+
+   
+
+
+  
+
 ]
