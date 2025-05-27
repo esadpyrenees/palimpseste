@@ -45,8 +45,8 @@ class App:
             self.roi_state = 0
        
 
-        self.carte_width_mm = 60
-        self.carte_height_mm = 113
+        self.carte_width_mm = 70
+        self.carte_height_mm = 137
 
         # GUI properties
         self.GUI_carte_width = self.carte_width_mm * 5
