@@ -25,13 +25,25 @@ venv/bin/python decode.py --cam 2
 venv/bin/python decode.py --cam 2 --roi "407 469 398 311 686 310 690 470"
 ```
 
-
-
 Puis lancé, après avoir configuré l'adresse IP du serveur dans les fichiers `server/server.js` et `chaussette.py`, lancer le serveur node:
 
 ```bash
 node server.js
 ```
+
+## Vues publiques
+
+### Affichage global
+`http://{ adresse IP }/`
+
+### Design & layout des cartes
+`http://{ adresse IP }/code`
+
+### Vue _master_ pour tester
+`http://{ adresse IP }/master`
+
+### Vue _free_ pour qu’une carte envoie un texte libre
+`http://{ adresse IP }/free`
 
 ## Code carte
 
