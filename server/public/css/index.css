@@ -1,158 +1,74 @@
+@font-face {
+  font-family: "Lora";
+  src: url('/server/public/css/font/Lora-Regular.ttf') format('truetype'),
+       url('/server/public/css/font/Lora-Bold.ttf') format('truetype'),
+       url('/server/public/css/font/Lora-BoldItalic.ttf') format('truetype'),
+       url('/server/public/css/font/Lora-Italic.ttf') format('truetype'),
+       url('/server/public/css/font/Lora-Medium.ttf') format('truetype'),
+       url('/server/public/css/font/Lora-MediumItalic.ttf') format('truetype'),
+       url('/server/public/css/font/Lora-SemiBold.ttf') format('truetype'),
+       url('/server/public/css/font/Lora-SemiBoldItalic.ttf') format('truetype');
+}
+body{
+  background: #c0bfbf;
+}
 
 .nocursor {
   cursor: none;
 }
 
-#input {
-  font-size: 16px; /* Définit une taille fixe pour l'input */
-  padding: 8px; /* Optionnel : ajuste l'espacement intérieur pour une meilleure lisibilité */
-  position:fixed;
-}
-
 p {
   display: inline; 
   padding-right: 1ch;
- 
-}
-
-.poster-frame .frame {
-  position: absolute;
-  font-size: 10px;
-  color: rgba(0, 0, 0, 0.6);
-  font-family: monospace;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  pointer-events: none; /* pour que ça n'interfère pas avec les interactions */
-}
-
-.frame.top {
-  top: 10px;
-  width: 100%;
-  text-align: right;
-  position:fixed;
-  margin-bottom: 100px;
-  right: 10px;
-}
-
-.frame.top2 {
-  top: 30px;
-  width: 100%;
-  text-align: center;
-  position:fixed;
-  margin-bottom: 100px;
-  text-align: right;
-  right: 10px;
-}
-
-.frame.left {
-  top:30%;
-  left: 320px;
-  transform: rotate(-90deg) translateY(-50%);
-  transform-origin: left center;
+  text-align: left;
 
 }
 
-.frame.left2 {
-  top:90%;    
-  left: 160px;
-  transform: rotate(-90deg) translateY(-50%);
-  transform-origin: left center;
-
-}
-
-.frame.right {
-  top: 50%;
-  right: 60px;
-  transform: rotate(-90deg) translateY(-50%);
-  transform-origin: right center;
-}
-
-.frame.right2 {
-  top: 70%;
-  right: 120px;
-  transform: rotate(-90deg) translateY(-50%);
-  transform-origin: right center;
-}
-
-.frame.bottom {
-  bottom: 20px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  position:fixed;
-}
-
-#main {
+#textbox {
   width: 210mm;  /* Largeur d'une page A4 */
   height: 297mm; /* Hauteur d'une page A4 */
   overflow: hidden; /* Empêche le texte de dépasser */
   position: relative; /* Nécessaire pour tout positionnement ou superposition */
   margin: 0 auto; /* Centre le canevas horizontalement */
-  padding: 20px; /* Optionnel : espace autour du contenu */
+  padding: 5em; /* Optionnel : espace autour du contenu */
+  background-color: rgb(255, 255, 255);
   box-sizing: border-box; /* Prend en compte les marges et le padding dans la taille de l'élément */
 }
 
-#datetime {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-family: monospace;
-  font-size: 14px;
-  padding: 4px 8px;
-  color: rgba(0, 0, 0, 0.6);
-
-}
-
 #print-counter {
-  font-family: monospace;
   z-index: 999;
-  position: fixed;
+  position: absolute;
   top: 40px;
-  right: 20px;
-  font-family: monospace;
+  right: 42em;
+  font-family: Lora;
   font-size: 14px;
   padding: 4px 8px;
   color: rgba(0, 0, 0, 0.6);
 }
 
+#print-counter::before {
+    content: "[ ";
+}
 
-input {
-  
-  position: fixed;
-   top: 20px;
-  left: 20px;
+#print-counter::after {
+  content: " ] ";
+}
 
-} 
+.content {
+  width: auto;      /* Laisser le contenu prendre sa largeur naturelle */
+  max-width: 50%;   /* Ne pas dépasser la largeur de la page */
+  padding: 20px;     /* Optionnel, pour espacer un peu les bords */
+}
+
+
 
 
 @media print {
   #main {
-      width: 210mm;  /* Largeur d'une page A4 */
-      height: 297mm; /* Hauteur d'une page A4 */
-      margin-top: 50px;
-      margin-left: 50px;
-      margin-right: 120px;
-      margin-bottom: 100px;
+      width: 104mm;  /* Largeur d'une page A4 */
+      height: 159mm; /* Hauteur d'une page A4 */
      
 }
-
-html,
-body {
-  margin: 0;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;  /* Pour que le texte reste aligné à gauche à l'intérieur du bloc */
-
-}
-
-
-
-  input {
-      display: none;
-    
-} 
 
 .content {
   width: auto;      /* Laisser le contenu prendre sa largeur naturelle */
