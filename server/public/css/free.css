@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "Lora";
+    src: url('/server/public/css/font/Lora-Regular.ttf') format('truetype'),
+         url('/server/public/css/font/Lora-Bold.ttf') format('truetype'),
+         url('/server/public/css/font/Lora-BoldItalic.ttf') format('truetype'),
+         url('/server/public/css/font/Lora-Italic.ttf') format('truetype'),
+         url('/server/public/css/font/Lora-Medium.ttf') format('truetype'),
+         url('/server/public/css/font/Lora-MediumItalic.ttf') format('truetype'),
+         url('/server/public/css/font/Lora-SemiBold.ttf') format('truetype'),
+         url('/server/public/css/font/Lora-SemiBoldItalic.ttf') format('truetype');
+  }
+
+body{
+    background: #c0bfbf;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.carte{
+        width: 70mm;
+        height: 137mm;
+        background: rgb(255, 255, 255);
+        border-radius: 1rem;
+        padding: 2.5rem;    
+        box-sizing: border-box;
+        position: relative;
+        margin-left: 50%;
+        transform: translate(-50%,0%);
+        top: 2em;
+
+}
+
+
+
+label{
+
+    text-align: left;
+    position: absolute;
+    font-family:"Lora";
+    font-size: 15pt;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family:"Lora";
+    margin: 0;
+    
+}
+
+textarea{
+
+   margin-top: 27em;
+    
+}
+
+input{
+    margin-left: 50%;
+    transform: translate(-50%,0%);
+}
+
+h3{
+    text-align: center;
+    position: absolute;
+    width: fit-content;
+    font-size: 10pt;
+    left: 50%;
+    transform: translate(-50%,0%);
+    font-family:"Lora";
+
+}
+
+p{
+    
+}
+
+footer{
+    bottom: 4em;
+    position: absolute;
+    font-size: 10pt;
+    left: 50%;
+    transform: translate(-50%,0%);
+    font-family:"Lora";
+}
+h3::before,
+footer::before {
+    content: "[ ";
+}
+h3::after,
+footer::after {
+    content: " ]";
+}
