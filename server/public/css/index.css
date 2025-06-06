@@ -10,72 +10,75 @@
        url('/server/public/css/font/Lora-SemiBoldItalic.ttf') format('truetype');
 }
 body{
-  background: #c0bfbf;
-}
+  background: #ffffff;
+  max-width: 592mm;
+  height: 895mm;
+  color: black;
+  font-family: 'Lora';
+  overflow: hidden;
 
+}
 .nocursor {
   cursor: none;
 }
 
 p {
   display: inline; 
-  padding-right: 1ch;
   text-align: left;
-
+  padding: 0.3em;
+ 
 }
 
 #textbox {
-  width: 210mm;  /* Largeur d'une page A4 */
-  height: 297mm; /* Hauteur d'une page A4 */
-  overflow: hidden; /* Empêche le texte de dépasser */
-  position: relative; /* Nécessaire pour tout positionnement ou superposition */
-  margin: 0 auto; /* Centre le canevas horizontalement */
-  padding: 5em; /* Optionnel : espace autour du contenu */
+  word-wrap:break-word;
+  position: relative; 
+  margin: 0 auto;
   background-color: rgb(255, 255, 255);
-  box-sizing: border-box; /* Prend en compte les marges et le padding dans la taille de l'élément */
+  font-family: 'Lora';
+  box-sizing: border-box;
+  max-width: 592mm;
+  height: 100vh;
+  overflow: hidden;
+  padding: 5em 2em;
+}
+
+footer {
+  font-family: 'Lora';
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 3em;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center; /* Centrage du texte à l'intérieur */
+
 }
 
 #print-counter {
-  z-index: 999;
-  position: absolute;
-  top: 40px;
-  right: 42em;
-  font-family: Lora;
+  font-family: 'Lora';
   font-size: 14px;
-  padding: 4px 8px;
   color: rgba(0, 0, 0, 0.6);
+  padding: 3em;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center; /* Centrage du texte à l'intérieur */
 }
 
 #print-counter::before {
     content: "[ ";
 }
 
+footer::before {
+  content: "[ ";
+}
+
 #print-counter::after {
   content: " ] ";
 }
 
-.content {
-  width: auto;      /* Laisser le contenu prendre sa largeur naturelle */
-  max-width: 50%;   /* Ne pas dépasser la largeur de la page */
-  padding: 20px;     /* Optionnel, pour espacer un peu les bords */
-}
-
-
-
-
-@media print {
-  #main {
-      width: 104mm;  /* Largeur d'une page A4 */
-      height: 159mm; /* Hauteur d'une page A4 */
-     
-}
-
-.content {
-  width: auto;      /* Laisser le contenu prendre sa largeur naturelle */
-  max-width: 100%;   /* Ne pas dépasser la largeur de la page */
-  padding: 20px;     /* Optionnel, pour espacer un peu les bords */
-}
-
-  
-
+footer::after {
+  content: " ] ";
 }

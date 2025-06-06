@@ -14,22 +14,6 @@ function toggleFullScreen(onoff) {
 	}
 }
 
-function updateDateTime() {
-	const datetime = document.getElementById('datetime');
-	const now = new Date();
-  
-	const options = {
-	  weekday: 'short',
-	  year: 'numeric',
-	  month: 'short',
-	  day: 'numeric',
-	  hour: '2-digit',
-	  minute: '2-digit',
-	  second: '2-digit',
-	};
-  
-	datetime.textContent = now.toLocaleString('fr-FR', options);
-  }
   
 // Affiche le compteur dès que la page est chargée
 window.addEventListener("load", () => {
@@ -42,7 +26,7 @@ window.addEventListener("load", () => {
 		counterDisplay.id = "print-counter";
 		document.body.appendChild(counterDisplay);
 	}
-	counterDisplay.textContent = `IMPRESSION NUMÉRO ${printCount}`;
+	counterDisplay.textContent = `[FRAGMENT NUMÉRO ] ${printCount}`;
 });
 
 // Augmente le compteur à chaque impression et l'affiche
@@ -57,21 +41,8 @@ window.addEventListener("beforeprint", () => {
 
 	// Met à jour l'affichage du compteur
 	let counterDisplay = document.getElementById("print-counter");
-	counterDisplay.textContent = `IMPRESSION NUMÉRO ${printCount}`;
+	counterDisplay.textContent = `[FRAGMENT NUMÉRO ] ${printCount}`;
 });
-
-  // Met à jour l'heure immédiatement
-  updateDateTime();
-  
-  // Puis toutes les secondes
-  setInterval(updateDateTime, 1000);
-
-
-function hideCursor(){
-  setTimeout( () => {
-    document.body.classList.add('nocursor')
-  }, 2000);
-}
 
 document.addEventListener('mousemove', function() {
   document.body.classList.remove('nocursor');
