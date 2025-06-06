@@ -1,3 +1,5 @@
+const offsetActionCode = 1000;
+
 function dec2bin(dec, cells) {
     str = (dec >>> 0).toString(2)
     if (str.length < cells) {
@@ -21,8 +23,17 @@ async function getData() {
     const json = await response.json();
     json.forEach((entry, idx) => {
 
-      const card = document.createElement('div');
-      card.dataset.code = idx;
+    const card = document.createElement('div');
+    shortcut = entry.shortcut;
+      // si c'est un nombre
+    if(!isNaN(shortcut)) {
+      card.dataset.code = shortcut;
+    } else {
+      // si c’est une lettre
+      code = shortcut.charCodeAt(0);
+      card.dataset.code = offsetActionCode + code;
+    }
+      
       card.className = "carte " + entry.type;
       const desc = entry.description.replaceAll('/', "<br>");
       card.innerHTML = `<h3>${entry.overtitle}</h3>

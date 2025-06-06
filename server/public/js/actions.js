@@ -113,14 +113,6 @@ function dtodj() {
             .replace(/(?<=[a-zA-Z])d(?=[a-zA-Z])/g, "dj");
     });
 }
-
-function ttotch() {
-    const paragraphs = main.querySelectorAll('p'); // Sélectionne tous les <p> dans main
-    paragraphs.forEach(p => {
-        p.textContent = p.textContent
-            .replace(/t/g, "tch")
-    });
-}
    
 function mix(){
     const p = main.querySelector('p:last-child');
@@ -157,7 +149,9 @@ function random_font(){
         "Arial", "Verdana", "Georgia", "Times New Roman", "Courier New", "Comic Sans MS",
         "'Rubik Mono One'", "'Staatliches'", "'Unica One'",
         "'Press Start 2P'", "'VT323'", "'Share Tech Mono'",
-        "'Nanum Brush Script'", "'Caveat'", "'Playfair Display'"
+        "'Nanum Brush Script'", "'Caveat'", "'Playfair Display'",
+        "'Futura'", "'Nazare'", "'IA Writer Duo'", "'Space Mono'",
+        "'DK Lemon Yellow Sun'", "'Antique Olive'", "'Bagnard'", "'Adelphe'"
     ];
     const p = main.querySelector('p:last-child'); // Sélectionne le dernier <p>
 
@@ -174,11 +168,6 @@ function random_corps(){
         const randomSize = Math.floor(Math.random() * (100 - 10 + 1)) + 10; // Taille entre 10px et 40px
         p.style.fontSize = randomSize + "px"; // Applique la taille de police
     }
-}
-
-function random_color(){
-    const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-    document.body.style.color = randomColor; // Change la couleur du texte sur toute la page
 }
 
 function reset(){
@@ -228,6 +217,13 @@ function interlignage(){
     }
 }
 
+function add_text() {
+    const p = document.querySelector('main');
+    if (p) {
+        p.textContent = p.textContent.trim() + ' genre';
+    }
+}
+
 const actions = {
     "q" : "cloneP",//-> ctrl c + ctrl p
     "e" : "eto_", //-> disparition
@@ -237,39 +233,22 @@ const actions = {
     "w" : "vtow", // v en w
     "z" : "stoz", // s en z
     "a" : "dtodj",
-    "à" : "ttotch",
     "m" : "mix", //-> Palindrome card
     "x" : "begaie",
     "l" : "apply_lettrine", 
     "h" : "break_lines",
     "p" : "random_font",
     "c" : "random_corps",
-    "t" : "random_color",
     "r" : "reset",
     "f" : "print",
     "b" : "letter_spacing",
     "v" : "alinea",
     "-" : "random_align",
     "i" : "interlignage",
-    "g" : "style"
+    "g" : "style",
+    "t" : "add_text"
 }
 
-function updateDateTime() {
-    const datetime = document.getElementById('datetime');
-    const now = new Date();
-  
-    const options = {
-      weekday: 'short',
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-    };
-  
-    datetime.textContent = now.toLocaleString('fr-FR', options);
-  }
   
 // Affiche le compteur dès que la page est chargée
 window.addEventListener("load", () => {
@@ -282,7 +261,7 @@ window.addEventListener("load", () => {
         counterDisplay.id = "print-counter";
         document.body.appendChild(counterDisplay);
     }
-    counterDisplay.textContent = `IMPRESSION NUMÉRO ${printCount}`;
+    counterDisplay.textContent = `FRAGMENT NUMÉRO ${printCount}`;
 });
 
 // Augmente le compteur à chaque impression et l'affiche
@@ -297,14 +276,8 @@ window.addEventListener("beforeprint", () => {
 
     // Met à jour l'affichage du compteur
     let counterDisplay = document.getElementById("print-counter");
-    counterDisplay.textContent = `IMPRESSION NUMÉRO ${printCount}`;
+    counterDisplay.textContent = `FRAGMENT NUMÉRO ${printCount}`;
 });
-
-  // Met à jour l'heure immédiatement
-  updateDateTime();
-  
-  // Puis toutes les secondes
-  setInterval(updateDateTime, 1000);
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();

@@ -3,6 +3,8 @@
 const socket = io();
 let userid = null;
 
+const offsetActionCode = 1000;
+
 const number = document.querySelector('#number');
 const submit = document.querySelector('#submit');
 submit.addEventListener('click', () => {
@@ -23,11 +25,17 @@ async function getData() {
     const cards = [];
     const json = await response.json();
     json.forEach((entry, idx) => {
+      let card_number = entry.shortcut;
+      // si c’est une lettre
+      if(isNaN(card_number)) {
+        code_point = card_number.charCodeAt(0);
+        card_number = offsetActionCode + code_point;
+      }
       cards.push({
-        shortcut: entry.shortcut,
+        card_number: card_number,
         text: entry.description,
         type: entry.type
-      })         
+      })
     });
 
     return cards;
@@ -39,12 +47,12 @@ async function getData() {
 getData().then((cards) => {
   cards.forEach(entry => {
     const btn = document.createElement('button');
-    btn.dataset.textid = entry.shortcut;
+    btn.dataset.textid = entry.card_number;
     btn.className = entry.type
     btn.textContent = entry.text;
     document.querySelector('.texts').appendChild(btn);
     btn.onclick = () => {
-      console.log(entry.shortcut);
+      console.log(entry.card_number);
       socket.emit("card change", btn.dataset.textid);
     }
   });

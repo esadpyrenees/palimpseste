@@ -46,6 +46,6 @@ window.addEventListener("beforeprint", () => {
 
 document.addEventListener('mousemove', function() {
   document.body.classList.remove('nocursor');
-  hideCursor()
+  //hideCursor()
 })
-hideCursor();
+//hideCursor();
