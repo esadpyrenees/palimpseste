@@ -3,18 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Créer don texte</title>
+  <title>Créer un texte</title>
   <link rel="stylesheet" href="css/free.css">
 </head>
 <body>
 <div class="carte">
   <h3>L'écriture</h3>
-  <label for="text">Copie-colle le dernier texto que tu as reçu</label>
+  <label class="random-label" for="text">Copie-colle le dernier texto que tu as reçu.</label>
+  <label class="random-label"  for="text">Copie-colle le dernier texto que ton voisin de jeu à reçu.</label>
+  <label class="random-label"for="text">Copie-colle ta dernière note.</label>
+  <label class="random-label"for="text">Copie-colle la dernière note de ton voisin.</label>
+  <label class="random-label"for="text">Décris en une seule phrase, la dernière photo de ta galerie.</label>
   <textarea id="text" ></textarea>
   <input type="submit" value="ok" id="submit">
   <footer>Fragment *</footer>
 </div>
 
+<script>
+  const labels = document.querySelectorAll('.random-label');
+
+  labels.forEach(label => label.style.display = 'none');
+
+  const randomIndex = Math.floor(Math.random() * labels.length);
+  labels[randomIndex].style.display = 'block';
+</script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/free.js"></script>
 </body>
