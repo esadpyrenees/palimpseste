@@ -102,3 +102,38 @@ footer::after {
     position: absolute;
     top: 100%;
 }
+
+@media print {
+    @page {
+        size: A5;
+        margin: 0;
+    }
+
+
+
+    body {
+        background: white !important;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .carte {
+        break-before: page;
+        break-after: avoid;
+        position: relative;
+        width: 70mm; /* ou 70mm si tu veux conserver ta taille */
+        height: 137mm; /* hauteur A5 */
+        margin: auto;
+        top: 50%;
+        transform: translateY(50%);
+        
+        display: block;
+        border: 1px solid black; /* active la bordure */
+        box-shadow: none; /* supprime les ombres pour l'impression */
+    }
+
+    h3, p, footer {
+        color: black !important;
+    }
+}

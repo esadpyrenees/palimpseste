@@ -1,22 +1,225 @@
 @font-face {
-  font-family: "Lora";
-  src: url('/server/public/css/font/Lora-Regular.ttf') format('truetype'),
-       url('/server/public/css/font/Lora-Bold.ttf') format('truetype'),
-       url('/server/public/css/font/Lora-BoldItalic.ttf') format('truetype'),
-       url('/server/public/css/font/Lora-Italic.ttf') format('truetype'),
-       url('/server/public/css/font/Lora-Medium.ttf') format('truetype'),
-       url('/server/public/css/font/Lora-MediumItalic.ttf') format('truetype'),
-       url('/server/public/css/font/Lora-SemiBold.ttf') format('truetype'),
-       url('/server/public/css/font/Lora-SemiBoldItalic.ttf') format('truetype');
+  font-family: Lora;
+  src: url('font/Lora-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+  @font-face {
+  font-family: Lora;
+  src: url('font/Lora-SemiBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+  @font-face {
+  font-family: Lora;
+  src: url('font/Lora-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Adelphe;
+  src: url('font/Adelphe-FlorealBold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Adelphe;
+  src: url('font/Adelphe-FlorealBoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Adelphe;
+  src: url('font/Adelphe-FlorealItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Adelphe;
+  src: url('font/Adelphe-FlorealRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Bagnard;
+  src: url('font/Bagnard.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Brixton;
+  src: url('font/BrixtonBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Brixton;
+  src: url('font/BrixtonBoldOblique.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Brixton;
+  src: url('font/BrixtonLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Brixton;
+  src: url('font/BrixtonMedium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Dominik;
+  src: url('font/Dominik.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Dominik;
+  src: url('font/DominikItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: EduVICWANTHandPre;
+  src: url('font/EduVICWANTHandPre-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: EduVICWANTHandPre;
+  src: url('font/EduVICWANTHandPre-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Intrepid;
+  src: url('font/IntrepidRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('font/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('font/Roboto-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('font/Roboto-BlackItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Savate;
+  src: url('font/Savate-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Savate;
+  src: url('font/Savate-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Savate;
+  src: url('font/Savate-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Rogbold;
+  src: url('font/Rogbold-3llGM.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Evolventa;
+  src: url('font/Evolventa-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Evolventa;
+  src: url('font/Evolventa-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Evolventa;
+  src: url('font/Evolventa-Oblique.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Evolventa;
+  src: url('font/Evolventa-BoldOblique.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Mestika;
+  src: url('font/Mestika.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Antique;
+  src: url('font/ANTIQUE1.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+
 body{
   background: #ffffff;
-  max-width: 592mm;
-  height: 895mm;
   color: black;
   font-family: 'Lora';
   overflow: hidden;
-
+  /* à ajuster ? */
+  line-height: 1.5; 
+  font-size: 3.5vw;
 }
 .nocursor {
   cursor: none;
@@ -35,16 +238,18 @@ p {
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
   font-family: 'Lora';
-  box-sizing: border-box;
-  max-width: 592mm;
-  height: 100vh;
   overflow: hidden;
   padding: 5em 2em;
 }
-
+@media screen {
+  #textbox  {
+    max-width: 592mm;
+    height: 100vh;
+  }
+}
 footer {
   font-family: 'Lora';
-  font-size: 14px;
+  font-size: .85em;
   color: rgba(0, 0, 0, 0.6);
   padding: 3em;
   position: fixed;
@@ -57,7 +262,7 @@ footer {
 
 #print-counter {
   font-family: 'Lora';
-  font-size: 14px;
+  font-size: .85em;
   color: rgba(0, 0, 0, 0.6);
   padding: 3em;
   position: fixed;
@@ -65,6 +270,7 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   text-align: center; /* Centrage du texte à l'intérieur */
+  white-space: nowrap;
 }
 
 #print-counter::before {

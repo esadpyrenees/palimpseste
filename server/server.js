@@ -7,9 +7,9 @@ import { Server } from 'socket.io';
 // config
 const port = process.env.PORT || 3000;
 // const ip = process.env.IP || 'localhost';
-const ip = process.env.IP || '192.168.1.228';
+const ip = process.env.IP || '127.0.0.1'
 
-
+console.log(`we got a process.env.IP ? ${process.env.IP}`);
 // Server
 const app = express();
 app.use(express.static('public'));
@@ -61,6 +61,12 @@ io.on('connection', async (socket) => {
     console.log("Message : changement de carte !");
     console.log(msg);
     io.emit('card change', msg);
+  });
+
+  // print
+  socket.on('print', (msg) => {
+    console.log("Print !");
+    io.emit('print', msg);
   });
 
   // free text

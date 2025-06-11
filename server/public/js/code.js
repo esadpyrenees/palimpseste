@@ -56,6 +56,7 @@ getData().then((cards) => {
 })
 
 let idc = 0
+
 //liste = [a=function(),b=function()]
 function createCodes(cartes){
   for (const carte of cartes) {
@@ -74,6 +75,7 @@ function createCodes(cartes){
               p.noStroke();
               p.fill("black")
               console.log(code)
+              
     
               let w = p.width / 4;
               const epaisseur = 24;
@@ -89,12 +91,12 @@ function createCodes(cartes){
 
               let splitsX = p.width / 3;
               for (let i = 0; i < top.length; i++) {
-                  p.fill(0,p.map(top[i], 0, 1, 0, 255));
+                  p.fill(13, 255, 0,p.map(top[i], 0, 1, 0, 255));
                   p.rect((i + 1) * splitsX, 0, w, epaisseur);
               }
 
               for (let i = 0; i < bottom.length; i++) {
-                p.fill(0,p.map(bottom[i], 0, 1, 0, 255));
+                p.fill(13, 255, 0,p.map(bottom[i], 0, 1, 0, 255));
                 p.rect((i + 1) * splitsX, p.height, w, epaisseur);
               }
 
@@ -105,12 +107,12 @@ function createCodes(cartes){
               let splitsY = p.height / 7;
               let h = p.height / 8;
               for (let i = 0; i < right.length; i++) {
-                  p.fill(0,p.map(right[i], 0, 1, 0, 255));
+                  p.fill(13, 255, 0,p.map(right[i], 0, 1, 0, 255));
                   p.rect(p.width, (i + 1) * splitsY, epaisseur, w);
               }
 
               for (let i = 0; i < left.length; i++) {
-                  p.fill(0,p.map(left[i], 0, 1, 0, 255));
+                  p.fill(13, 255, 0,p.map(left[i], 0, 1, 0, 255));
                   p.rect(0, (i + 1) * splitsY, epaisseur, w);
               }
           }

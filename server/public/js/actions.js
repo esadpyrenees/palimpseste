@@ -1,3 +1,4 @@
+
 const texte = []
 
 let selected = []
@@ -146,12 +147,8 @@ function break_lines(){
 
 function random_font(){
     const fonts = [
-        "Arial", "Verdana", "Georgia", "Times New Roman", "Courier New", "Comic Sans MS",
-        "'Rubik Mono One'", "'Staatliches'", "'Unica One'",
-        "'Press Start 2P'", "'VT323'", "'Share Tech Mono'",
-        "'Nanum Brush Script'", "'Caveat'", "'Playfair Display'",
-        "'Futura'", "'Nazare'", "'IA Writer Duo'", "'Space Mono'",
-        "'DK Lemon Yellow Sun'", "'Antique Olive'", "'Bagnard'", "'Adelphe'"
+        "Arial", "Lora", "Savate","Roboto","Evolventa","EduVICWANTHandPre",
+        "Dominik","Brixton","Adelphe","Bagnard","Intrepid","Rogbold","Mestika","Antique"
     ];
     const p = main.querySelector('p:last-child'); // Sélectionne le dernier <p>
 
@@ -175,7 +172,8 @@ function reset(){
 }
 
 function print(){
-    window.print(); // Ouvre la fenêtre d'impression
+    console.log("old print function");
+    // window.print(); // Ouvre la fenêtre d'impression
 }
 
 function apply_lettrine() {
@@ -183,7 +181,7 @@ function apply_lettrine() {
     if (p) {
         const text = p.textContent;
         if (text.length > 0) {
-            p.innerHTML = `<span style="font-size:2em; font-weight: bold; vertical-align: baseline;">${text[0]}</span>${text.slice(1)}`;
+            p.innerHTML = `<span style="font-size:2em; font-weight: bold; vertical-align: baseline; line-height: 0; position: relative; top: .2em;">${text[0]}</span>${text.slice(1)}`;
         }
     }
 }
@@ -279,26 +277,28 @@ window.addEventListener("beforeprint", () => {
     counterDisplay.textContent = `FRAGMENT NUMÉRO ${printCount}`;
 });
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const val = input.value
-    // si c’est un chiffre
-    if(!isNaN(val)) {
-        // uniquement si le fragment n’a pas déjà été ajouté
-        if( !selected.includes(val)){
-            selected.push(val)
-            const p = document.createElement('p');
-            p.textContent = texte[val]
-            main.appendChild(p);            
-        }
-    } else {
-        // si c’est une lettre
-        if(actions.hasOwnProperty(val)) {
-            const action = actions[val];
-            window[action]();
-        }
-    }
-    input.value = "";
-    input.focus()
-    
-})
+// if(form){
+//     form.addEventListener('submit', (e) => {
+//         e.preventDefault();
+//         const val = input.value
+//         // si c’est un chiffre
+//         if(!isNaN(val)) {
+//             // uniquement si le fragment n’a pas déjà été ajouté
+//             if( !selected.includes(val)){
+//                 selected.push(val)
+//                 const p = document.createElement('p');
+//                 p.textContent = texte[val]
+//                 main.appendChild(p);            
+//             }
+//         } else {
+//             // si c’est une lettre
+//             if(actions.hasOwnProperty(val)) {
+//                 const action = actions[val];
+//                 window[action]();
+//             }
+//         }
+//         input.value = "";
+//         input.focus()
+        
+//     })
+// }
