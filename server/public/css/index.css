@@ -30,15 +30,8 @@ p {
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
   font-family: 'Lora';
-  overflow: hidden;
-  padding: 5em 2em;
 }
-@media screen {
-  #textbox  {
-    max-width: 592mm;
-    height: 100vh;
-  }
-}
+
 footer {
   font-family: 'Lora';
   font-size: .85em;
@@ -56,11 +49,7 @@ footer {
   font-family: 'Lora';
   font-size: .85em;
   color: rgba(0, 0, 0, 0.6);
-  padding: 3em;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+
   text-align: center; /* Centrage du texte à l'intérieur */
   white-space: nowrap;
 }
