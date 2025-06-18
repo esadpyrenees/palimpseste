@@ -1,14 +1,3 @@
-@font-face {
-    font-family: "Lora";
-    src: url('/server/public/css/font/Lora-Regular.ttf') format('truetype'),
-         url('/server/public/css/font/Lora-Bold.ttf') format('truetype'),
-         url('/server/public/css/font/Lora-BoldItalic.ttf') format('truetype'),
-         url('/server/public/css/font/Lora-Italic.ttf') format('truetype'),
-         url('/server/public/css/font/Lora-Medium.ttf') format('truetype'),
-         url('/server/public/css/font/Lora-MediumItalic.ttf') format('truetype'),
-         url('/server/public/css/font/Lora-SemiBold.ttf') format('truetype'),
-         url('/server/public/css/font/Lora-SemiBoldItalic.ttf') format('truetype');
-  }
 
 body{
     background: #c0bfbf;
