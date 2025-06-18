@@ -4,16 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maître du jeu</title>
-  <link rel="stylesheet" href="css/master.css">
   <style>
+    .actions, .texts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5em;
+    }
     .texts button {
       width: 20em;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      border: none;
+      border-radius: 1em;
+      padding: .25em 1em;
     }
-    button.text { background: #000; color: white;}
-    button.action { background: lime; color: white;}
+    button.text { background: #eee; color: black;}
+    button.action { background: yellow; color: black;}
+    .printit { background: lime;}
+    button:hover {
+      background: #000;
+      color: whitesmoke;
+    }
   </style>
 </head>
 <body>
