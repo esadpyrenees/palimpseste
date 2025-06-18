@@ -4,8 +4,8 @@ import time
 import socketio
 
 # IP of nodejs server
-# https://palimpseste.alwaysdata.net ?
-server_ip = 'http://127.0.1:3000/'
+
+server_ip = 'https://palimpseste.alwaysdata.net'
 
 def emitMessage(msgType, msg):
   sio = socketio.Client()  
