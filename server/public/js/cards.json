@@ -954,7 +954,7 @@
     {
         "type": "action",
         "description": "Doubler tous les [s]",
-        "overtitle": "Le dédoublement",
+        "overtitle": "Le double",
         "subtitle": "Fragment s",
         "action": "stoss",
         "shortcut": "s"
@@ -972,7 +972,7 @@
     {
         "type": "action",
         "description": "Changer tous les [s] en [z]",
-        "overtitle": "Le changement",
+        "overtitle": "Le zozotement",
         "subtitle": "Fragment z",
         "action": "stoz",
         "shortcut": "z"
@@ -1121,6 +1121,8 @@
         "action": "add_text",
         "shortcut": "t"
     }
+
+
 
 
 

@@ -1,6 +1,6 @@
 from chaussette import emitMessage
 
-currentCardNumber = 0
+currentCardNumber = 1
 
 def sendMessage(cardNumber):
     global currentCardNumber

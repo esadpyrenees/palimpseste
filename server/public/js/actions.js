@@ -162,8 +162,8 @@ function random_corps(){
     const p = main.querySelector('p:last-child'); // Sélectionne le dernier <p>
 
     if (p) { // Vérifie si un <p> existe
-        const randomSize = Math.floor(Math.random() * (100 - 10 + 1)) + 10; // Taille entre 10px et 40px
-        p.style.fontSize = randomSize + "px"; // Applique la taille de police
+        const randomSize = Math.floor(Math.random() * (6 - 0.5)) + 0.5; // Taille 
+        p.style.fontSize = randomSize + "em"; // Applique la taille de police
     }
 }
 
@@ -201,11 +201,12 @@ function alinea(){
     }
 }
 
-function random_align(){
-    const alignments = ["left", "right", "center", "justify"];
-    const randomAlign = alignments[Math.floor(Math.random() * alignments.length)];
-    document.body.style.textAlign = randomAlign;
+function random_align() {
+        const alignments = ["left", "right", "center", "justify"];
+        const randomAlign = alignments[Math.floor(Math.random() * alignments.length)];
+        document.querySelector("#textbox").style.textAlign = randomAlign;
 }
+
 
 function interlignage(){
     const randomLineHeight = (Math.random() * 5.4 + 0).toFixed(2);
@@ -216,11 +217,13 @@ function interlignage(){
 }
 
 function add_text() {
-    const p = document.querySelector('main');
+    const main = document.querySelector('main');
+    const p = main.querySelector('p:last-child');
     if (p) {
-        p.textContent = p.textContent.trim() + ' genre';
+        p.textContent = p.textContent.trim() + ' Genre';
     }
 }
+
 
 const actions = {
     "q" : "cloneP",//-> ctrl c + ctrl p

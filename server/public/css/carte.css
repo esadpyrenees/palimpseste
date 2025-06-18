@@ -1,14 +1,23 @@
 @font-face {
-        font-family: "Lora";
-        src: url('/server/public/css/font/Lora-Regular.ttf') format('truetype'),
-             url('/server/public/css/font/Lora-Bold.ttf') format('truetype'),
-             url('/server/public/css/font/Lora-BoldItalic.ttf') format('truetype'),
-             url('/server/public/css/font/Lora-Italic.ttf') format('truetype'),
-             url('/server/public/css/font/Lora-Medium.ttf') format('truetype'),
-             url('/server/public/css/font/Lora-MediumItalic.ttf') format('truetype'),
-             url('/server/public/css/font/Lora-SemiBold.ttf') format('truetype'),
-             url('/server/public/css/font/Lora-SemiBoldItalic.ttf') format('truetype');
-    }
+    font-family: Lora;
+    src: url('font/Lora-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: Lora;
+    src: url('font/Lora-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: Lora;
+    src: url('font/Lora-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
 
 body{
     background: #c0bfbf;

@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
 		counterDisplay.id = "print-counter";
 		document.body.appendChild(counterDisplay);
 	}
-	counterDisplay.textContent = `[FRAGMENT NUMÉRO ] ${printCount}`;
+	counterDisplay.textContent = `FRAGMENT NUMÉRO  ${printCount}`;
 });
 
 // Augmente le compteur à chaque impression et l'affiche

@@ -111,13 +111,6 @@
 }
 
 @font-face {
-  font-family: Intrepid;
-  src: url('font/IntrepidRegular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: Roboto;
   src: url('font/Roboto-Bold.ttf') format('truetype');
   font-weight: bold;
@@ -228,7 +221,7 @@ body{
 p {
   display: inline; 
   text-align: left;
-  padding: 0.3em;
+  /* padding: 0.3em; */
  
 }
 

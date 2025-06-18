@@ -75,7 +75,7 @@ socket.on('card change', (card_number) => {
   console.log(card_shortcut);
   if(card_shortcut == "f"){
     // cards_to_actions[entry.shortcut] = entry
-    const text_to_print = textbox.innerHTML;
+    const text_to_print = textbox.outerHTML;
     const print_counter = document.querySelector('#print-counter').textContent;  
     socket.emit("print", {
       "text_to_print": text_to_print,
@@ -85,7 +85,7 @@ socket.on('card change', (card_number) => {
     const text = cards_to_text[card_shortcut] ?? null;
     const action = cards_to_actions[card_shortcut] ?? null;
     if(text) {
-      textbox.insertAdjacentHTML("beforeend", `<p>${text}</p>`)
+      textbox.insertAdjacentHTML("beforeend", `<p>${text}</p> `)
     }
     if(action) {
       const fn = window[action["action"]]
