@@ -48,7 +48,12 @@ getData().then((cards) => {
   cards.forEach(entry => {
     const btn = document.createElement('button');
     btn.dataset.textid = entry.card_number;
-    btn.className = entry.type
+    btn.className = entry.type;
+
+    if (entry.card_number == 1102) {
+      btn.className = "printit"  
+    }
+    
     btn.textContent = entry.text;
     document.querySelector('.texts').appendChild(btn);
     btn.onclick = () => {
