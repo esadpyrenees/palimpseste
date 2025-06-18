@@ -7,7 +7,7 @@ import { Server } from 'socket.io';
 // config
 const port = process.env.PORT || 3000;
 // const ip = process.env.IP || 'localhost';
-const ip = process.env.IP || '127.0.0.1'
+const ip = process.env.IP || 'https://palimpseste.alwaysdata.net'
 
 console.log(`we got a process.env.IP ? ${process.env.IP}`);
 // Server
