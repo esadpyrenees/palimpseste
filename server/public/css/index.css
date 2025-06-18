@@ -49,7 +49,7 @@ footer {
   font-family: 'Lora';
   font-size: .85em;
   color: rgba(0, 0, 0, 0.6);
-
+  margin-top: 2em;
   text-align: center; /* Centrage du texte à l'intérieur */
   white-space: nowrap;
 }
