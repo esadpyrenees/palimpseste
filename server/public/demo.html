@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palimpseste</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <style>
+    html, body { height: 100%; }
+    body {
+        background: #000;
+    }
+    iframe {
+        background: white;
+        position: fixed;
+        top: 1em;
+        right: 1em;
+        bottom:1em;
+        aspect-ratio: 9/16;
+        height: calc(100vh - 2em);
+    }
+  </style>
+</head>
+<body>
+
+  <iframe src="https://palimpseste.alwaysdata.net" frameborder="0"></iframe>
+  <script>
+    	document.body.ondblclick = function (e) {
+            toggleFullScreen();
+        };
+        function toggleFullScreen(onoff) {
+            // should we go FS ?
+            const to_fullscreen = onoff == "on" ? true : !document.fullscreenElement;
+            if (to_fullscreen) {
+                document.documentElement.requestFullscreen();
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+  </script>
+</body>
+</html>
