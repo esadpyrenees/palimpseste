@@ -42,7 +42,7 @@ function doYourJob() {
 
     setTimeout(() => {
         window.print()
-        // console.log("yop");
+        window.reload()
         
     }, 500);
 
