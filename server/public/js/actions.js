@@ -170,7 +170,7 @@ function random_corps(){
 function reset(){
     // location.reload(); // Recharge la page
     document.querySelector("#textbox").removeAttribute('style');
-    document.innerHTML = "";
+    document.querySelector("#textbox").innerHTML = "";
 }
 
 function print(){
