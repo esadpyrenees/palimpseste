@@ -41,8 +41,8 @@ function doYourJob() {
     previewer.preview('', stylesheets);
 
     setTimeout(() => {
-        // window.print()
-        console.log("yop");
+        window.print()
+        // console.log("yop");
         
     }, 500);
 
