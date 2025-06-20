@@ -7,11 +7,13 @@ const offsetActionCode = 1000;
 
 const number = document.querySelector('#number');
 const submit = document.querySelector('#submit');
-submit.addEventListener('click', () => {
-  socket.emit("set players number", number.value);
-  number.remove()
-  submit.remove()
-})
+if(submit && number){
+  submit.addEventListener('click', () => {
+    socket.emit("set players number", number.value);
+    number.remove()
+    submit.remove()
+  })
+}
 
 
 async function getData() {
@@ -53,8 +55,12 @@ getData().then((cards) => {
     if (entry.card_number == 1102) {
       btn.className = "printit"  
     }
+
+    if (entry.card_number == 1114) {
+      btn.className = "newparty"  
+    }
     
-    btn.textContent = entry.text;
+    btn.textContent = entry.card_number + " - " + entry.text;
     document.querySelector('.texts').appendChild(btn);
     btn.onclick = () => {
       console.log(entry.card_number);
