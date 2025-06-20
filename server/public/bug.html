@@ -5,21 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maître du jeu</title>
   <style>
+    body {
+      font-size: 18px;
+    }
     * {box-sizing: border-box; font-family: monospace;}
-    .actions, .texts {
+    .actions {
       display: flex;
       flex-wrap: wrap;
       gap: .5em;
+    }
+    .texts {
       display: none;
     }
     button {
+      font-size: 18px;
       text-overflow: ellipsis;
       white-space: nowrap;
       border: none;
       border-radius: 1em;
       padding: .25em 1em;
+      overflow: hidden;
+      max-width: 100%;
     }
-    button.text { background: #eee; color: black;}
+    button.text { background: #eee; color: black; display: none;}
     button.action { background: yellow; color: black;}
     .printit { background: lime;}
     button:hover {
@@ -64,7 +72,7 @@
     <button>2</button>
     <button>3</button>
     <button>4</button>
-    <button>4</button>
+    <button>5</button>
     <button>6</button>
     <button>7</button>
     <button>8</button>

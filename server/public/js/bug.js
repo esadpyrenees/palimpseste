@@ -33,9 +33,12 @@ async function getData() {
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
     }
+    
+    
 
     const cards = [];
     const json = await response.json();
+    console.log(json);
     json.forEach((entry, idx) => {
       let card_number = entry.shortcut;
       // si c’est une lettre
@@ -67,7 +70,7 @@ getData().then((cards) => {
     }
     
     btn.textContent = entry.text;
-    document.querySelector('.texts').appendChild(btn);
+    document.querySelector('.actions').appendChild(btn);
     btn.onclick = () => {
       console.log(entry.card_number);
       socket.emit("card change", btn.dataset.textid);
