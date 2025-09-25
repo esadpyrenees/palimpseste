@@ -5,19 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maître du jeu</title>
   <style>
+    body{
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
     .actions, .texts {
       display: flex;
       flex-wrap: wrap;
       gap: .5em;
     }
+
+    .texts{
+      height: fit-content;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      max-width: 700px;
+
+    }
     .texts button {
-      width: 20em;
-      overflow: hidden;
+      width: calc(50% - .5em);
+      height: 25vh;
+      /* overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
+      white-space: nowrap; */
       border: none;
       border-radius: 1em;
-      padding: .25em 1em;
+      padding: 2em 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     button.text { background: #eee; color: black;}
     button.action { background: yellow; color: black;}
@@ -26,20 +49,21 @@
       background: #000;
       color: whitesmoke;
     }
+
   </style>
 </head>
 <body>
 
-  <label for="number">Nombre de joueur⋅euses</label>
+  <!-- <label for="number">Nombre de joueur⋅euses</label>
   <input type="text" id="number" value="2" >
-  <input type="submit" value="ok" id="submit">
+  <input type="submit" value="ok" id="submit"> -->
 
-  <hr>
+  <!-- <hr> -->
 
   <div class="actions"></div>
   <div class="texts"></div>
 
   <script src="/socket.io/socket.io.js"></script>
-  <script src="js/master.js"></script>
+  <script src="js/masterTiti.js"></script>
 </body>
 </html>

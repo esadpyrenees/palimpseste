@@ -5,9 +5,16 @@ import { dirname, join } from 'node:path';
 import { Server } from 'socket.io';
 
 // config
-const port = process.env.PORT || 3000;
+// const port = process.env.PORT || 3000;
 // const ip = process.env.IP || 'localhost';
 const ip = process.env.IP || 'https://palimpseste.alwaysdata.net'
+
+// IP de chez Titi
+//const ip = "192.168.1.144";
+
+
+// IP de chez le J
+//const ip = "192.168.0.24";
 
 console.log(`we got a process.env.IP ? ${process.env.IP}`);
 // Server
