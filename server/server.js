@@ -5,7 +5,7 @@ import { dirname, join } from 'node:path';
 import { Server } from 'socket.io';
 
 // config
-// const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 // const ip = process.env.IP || 'localhost';
 const ip = process.env.IP || 'https://palimpseste.alwaysdata.net'
 
