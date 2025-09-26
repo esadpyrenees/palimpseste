@@ -168,7 +168,9 @@ function random_corps(){
 }
 
 function reset(){
-    location.reload(); // Recharge la page
+    // location.reload(); // Recharge la page
+    document.querySelector("#textbox").removeAttribute('style');
+    document.querySelector("#textbox").innerHTML = "";
 }
 
 function print(){

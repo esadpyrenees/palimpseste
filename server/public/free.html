@@ -10,13 +10,15 @@
 <body>
 <div class="carte">
   <h3>L'écriture</h3>
-  <label class="random-label" for="text">Copie-colle le dernier texto que tu as reçu.</label>
-  <label class="random-label"  for="text">Copie-colle le dernier texto que ton voisin de jeu à reçu.</label>
-  <label class="random-label"for="text">Copie-colle ta dernière note.</label>
-  <label class="random-label"for="text">Copie-colle la dernière note de ton voisin.</label>
-  <label class="random-label"for="text">Décris en une seule phrase, la dernière photo de ta galerie.</label>
-  <textarea id="text" ></textarea>
-  <input type="submit" value="ok" id="submit">
+  <div class="content">
+    <label class="random-label" for="text">Copie-colle le dernier texto que tu as reçu.</label>
+    <label class="random-label"  for="text">Copie-colle le dernier texto que ton voisin de jeu à reçu.</label>
+    <label class="random-label"for="text">Copie-colle ta dernière note.</label>
+    <label class="random-label"for="text">Copie-colle la dernière note de ton voisin.</label>
+    <label class="random-label"for="text">Décris en une seule phrase la dernière photo de ta galerie.</label>
+    <textarea id="text" ></textarea>
+    <input type="submit" value="ok" id="submit">
+  </div>
   <footer>Fragment *</footer>
 </div>
 
@@ -26,7 +28,7 @@
   labels.forEach(label => label.style.display = 'none');
 
   const randomIndex = Math.floor(Math.random() * labels.length);
-  labels[randomIndex].style.display = 'block';
+  labels[randomIndex].style.display = 'flex';
 </script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/free.js"></script>

@@ -5,16 +5,26 @@ let userid = null;
 
 const offsetActionCode = 1000;
 
-const number = document.querySelector('#number');
-const submit = document.querySelector('#submit');
-if(submit && number){
-  submit.addEventListener('click', () => {
-    socket.emit("set players number", number.value);
-    number.remove()
-    submit.remove()
-  })
-}
+let numero = '';
 
+const buttons = document.querySelectorAll('button');
+const result = document.querySelector('.result');
+buttons.forEach(button => {
+  button.onclick = () => {
+    if (button.textContent == "×") {
+      numero = numero.substring(0, numero.length - 1);
+      result.textContent = numero
+    } else if(button.textContent == "→"){
+      socket.emit("card change", parseInt(numero)); 
+      numero = '';
+      result.textContent = '';
+    } else {      
+      numero += button.textContent
+      result.textContent = numero
+    }
+    
+  }
+});
 
 async function getData() {
   const url = "js/cards.json";
@@ -23,9 +33,12 @@ async function getData() {
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
     }
+    
+    
 
     const cards = [];
     const json = await response.json();
+    console.log(json);
     json.forEach((entry, idx) => {
       let card_number = entry.shortcut;
       // si c’est une lettre
@@ -55,13 +68,9 @@ getData().then((cards) => {
     if (entry.card_number == 1102) {
       btn.className = "printit"  
     }
-
-    if (entry.card_number == 1114) {
-      btn.className = "newparty"  
-    }
     
-    btn.textContent = entry.card_number + " - " + entry.text;
-    document.querySelector('.texts').appendChild(btn);
+    btn.textContent = entry.text;
+    document.querySelector('.actions').appendChild(btn);
     btn.onclick = () => {
       console.log(entry.card_number);
       socket.emit("card change", btn.dataset.textid);

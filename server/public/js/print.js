@@ -42,7 +42,9 @@ function doYourJob() {
 
     setTimeout(() => {
         window.print()
-        // console.log("yop");
+        setTimeout(() => {
+           window.location.reload() 
+        }, 3000);
         
     }, 500);
 

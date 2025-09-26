@@ -7,4 +7,7 @@ submit.addEventListener('click', () => {
   socket.emit("free text", text.value);
   text.remove()
   submit.remove()
+  document.querySelectorAll('.random-label').forEach(element => {
+    element.textContent = "Merci !";
+  });
 })

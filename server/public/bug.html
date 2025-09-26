@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maître du jeu</title>
+  <style>
+    body {
+      font-size: 18px;
+    }
+    * {box-sizing: border-box; font-family: monospace;}
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5em;
+    }
+    .texts {
+      display: none;
+    }
+    button {
+      font-size: 18px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      border: none;
+      border-radius: 1em;
+      padding: .25em 1em;
+      overflow: hidden;
+      max-width: 100%;
+    }
+    button.text { background: #eee; color: black; display: none;}
+    button.action { background: yellow; color: black;}
+    .printit { background: lime;}
+    button:hover {
+      background: #000;
+      color: whitesmoke;
+    }
+    .pad {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+      margin: 1em;
+    }
+    .pad button {
+      aspect-ratio: 1;
+    }
+    .pad :last-child{
+      background: limegreen;
+    }
+    .result {
+      line-height: 1;
+      text-align: center;
+      border: 1px solid;
+      border-radius: 1em;
+      padding: 1em;
+      margin: 1em;
+      min-height: 6em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- <label for="number">Nombre de joueur⋅euses</label>
+  <input type="text" id="number" value="2" >
+  <input type="submit" value="ok" id="submit"> -->
+  <div class="result"></div>
+  <div class="pad">
+    <button>0</button>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button>×</button>
+    <button>→</button>
+  </div>
+
+
+  <div class="actions"></div>
+  <div class="texts"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/bug.js"></script>
+</body>
+</html>
